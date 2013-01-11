@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>KendoUI Context Menu</title>
+
+        <script type="text/javascript" src="../../../js/jquery-1.7.2.js"></script>
+        <script type="text/javascript" src="../../../js/kendo.web.min.js"></script>
+        <script type="text/javascript" src="../../../js/menu.ex/kendo.menu.ex.js"></script>
+
+        <link href="../../content/shared/styles/examples-offline.css" rel="stylesheet">
+        <link href="../../../styles/kendo.common.min.css" rel="stylesheet" />
+        <link href="../../../styles/kendo.default.min.css" rel="stylesheet" />
+        <link href="../../../js/menu.ex/kendo.menu.ex.css" rel="stylesheet" />
+
+    </head>
+
+    <body>
+        <a class="offline-button" href="../index.html">Back</a>
+	    <p>A simple KendoUI compatible context menu.<br><br></p>
+        <p>Click on "Item #1" to check out data binding.<br><br></p>
+<div id="newArea"> new area </div>
+
+<div id="newArea3"> new area 3</div>
+
+        <div id="example" class="k-content">
+	        <span id="mySpan" class="menu">Click here right mouse button</span>
+	        <div id="myButton" class="k-button menu">or here</div><br><br><br>
+
+<ul data-role="menuex" id="contextMenu2" data-anchor=" #mySpan,#myButton,#grid " >
+<!-- <ul  id="contextMenu" > -->
+                <li><img src="../../content/shared/icons/sports/golf.png">Item #1</li>
+                <li>Item #2</li>
+                <li>Item #3
+                    <ul>
+                        <li>Item #3.1</li>
+                        <li>Item #3.2</li>
+                    </ul>
+                </li>
+                </ul>
+
+
+            <ul data-role="menuex" id="contextMenu1" data-anchor=" #newArea4 " >
+                <li><img src="../../content/shared/icons/sports/golf.png">Item #11</li>
+                <li>Item #22</li>
+                <li>Item #33
+                    <ul>
+                        <li>Item #33.11</li>
+                        <li>Item #33.22</li>
+                    </ul>
+                </li>
+                </ul>
+
+            <ul data-role="menuex" id="contextMenu4" data-anchor=" #newArea " >
+                <li><img src="../../content/shared/icons/sports/golf.png">Item 4#1</li>
+                <li>Item 4#2</li>
+                <li>Item 4#3
+                    <ul>
+                        <li>Item 4#3.1</li>
+                        <li>Item 4#3.2</li>
+                    </ul>
+                </li>
+                </ul>
+
+<div id="newArea2"> new area 2</div>
+<div id="newArea4"> new area 4</div>
+<!--             -->
+<div data-role="menuex" id="contextMenu3" data-anchor=" #newArea2 " data-delay="1000000" >
+                <li>
+                    Products
+                    <ul>
+                        <li>
+                            Furniture
+                            <ul> <!-- moving the UL to the next line will cause an IE7 problem -->
+                                <li>Tables & Chairs</li>
+                                <li>Sofas</li>
+                                <li>Occasional Furniture</li>
+                                <li>Childerns Furniture</li>
+                                <li>Beds</li>
+                            </ul>
+
+
+                        </li>
+                        <li>
+                            Decor
+                            <ul> <!-- moving the UL to the next line will cause an IE7 problem -->
+                                <li>Bed Linen</li>
+                                <li>Throws</li>
+                                <li>Curtains & Blinds</li>
+                                <li>Rugs</li>
+                                <li>Carpets</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Storage
+                            <ul> <!-- moving the UL to the next line will cause an IE7 problem -->
+                                <li>Wall Shelving</li>
+                                <li>Kids Storage</li>
+                                <li>Baskets</li>
+                                <li>Multimedia Storage</li>
+                                <li>Floor Shelving</li>
+                                <li>Toilet Roll Holders</li>
+                                <li>Storage Jars</li>
+                                <li>Drawers</li>
+                                <li>Boxes</li>
+                            </ul>
+
+                        </li>
+                        <li>
+                            Lights
+                            <ul> <!-- moving the UL to the next line will cause an IE7 problem -->
+                                <li>Ceiling</li>
+                                <li>Table</li>
+                                <li>Floor</li>
+                                <li>Shades</li>
+                                <li>Wall Lights</li>
+                                <li>Spotlights</li>
+                                <li>Push Light</li>
+                                <li>String Lights</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Stores
+                    <ul>
+                        <li>
+                            <div id="template" class="k-content" style="padding: 10px;">
+                                <h2>Around the Globe</h2>
+                                <ol>
+                                    <li>United States</li>
+                                    <li>Europe</li>
+                                    <li>Canada</li>
+                                    <li>Australia</li>
+                                </ol>
+                                <button class="k-button">See full list</button>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Blog
+                </li>
+                <li>
+                    Company
+                </li>
+                <li>
+                    Events
+                </li>
+                <li disabled="disabled">
+                    News
+                </li>
+            </div>
+        </div>
+
+        <div id="example" class="k-content">
+            <table id="grid">
+                <thead>
+                    <tr>
+                        <th data-field="rank">Rank</th>
+                        <th data-field="rating">Rating</th>
+                        <th data-field="title">Title</th>
+                        <th data-field="year">Year</th>
+                    </tr>
+                 </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td><td>9.2</td><td>The Shawshank Redemption</td><td>1994</td>
+                    </tr>
+                    <tr>
+                        <td>2</td><td>9.2</td><td>The Godfather</td><td>1972</td>
+                    </tr>
+                    <tr>
+                        <td>3</td><td>9</td><td>The Godfather: Part II</td><td>1974</td>
+                    </tr>
+                    <tr>
+                        <td>4</td><td>8.9</td><td>Il buono, il brutto, il cattivo.</td><td>1966</td>
+                    </tr>
+                    <tr>
+                        <td>5</td><td>8.9</td><td>Pulp Fiction</td><td>1994</td>
+                    </tr>
+                    <tr>
+                        <td>6</td><td>8.9</td><td>12 Angry Men</td><td>1957</td>
+                    </tr>
+                    <tr>
+                        <td>7</td><td>8.9</td><td>Schindler's List</td><td>1993</td>
+                    </tr>
+                    <tr>
+                        <td>8</td><td>8.8</td><td>One Flew Over the Cuckoo's Nest</td><td>1975</td>
+                    </tr>
+                    <tr>
+                        <td>9</td><td>8.8</td><td>Inception</td><td>2010</td>
+                    </tr>
+                    <tr>
+                        <td>10</td><td>8.8</td><td>The Dark Knight</td><td>2008</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <script>
+
+/*            $("#grid").kendoGrid({
+            height: 250
+            });
+*/
+            var viewModel = kendo.observable({
+            }); //end kendo.observable
+
+var grid=$("#grid").kendoGrid({ }).data("kendoGrid");  //need to get div holding our target grid
+var gridtbody=grid.tbody;
+ $("#contextMenu").kendoMenuEx({anchor: grid.tbody});
+
+// $("#contextMenu").kendoMenuEx({anchor: '.k-grid-content, #mySpan' });
+
+/*
+var mySpan = $("#mySpan")
+ $("#contextMenu").kendoMenuEx({anchor: 'grid.tbody, mySpan, #myButton' });
+// my experiments suggest that the $(options.anchor).bind() call doesn't work on both a jQuery selector and a jQuery object.
+--> the grid.tbody example shows differently
+*/
+
+/*for testing out if the options.anchor.bind will work whether a jQuery selector is passed or a jQuery object is passed.
+var mySpan = $("#mySpan")
+ $("#contextMenu").kendoMenuEx({anchor: 'mySpan' }); //duhhhh this is a string and therefore it is passed as a string. wo the parens it is then interpreted as an object and it works.
+ $("#contextMenu").kendoMenuEx({anchor: mySpan }); //works. passed as object, not string.
+*/
+
+
+// $("#contextMenu").kendoMenuEx({anchor: '#mySpan' });
+
+// contextMenu=new kendoMenuEx({anchor: '#grid' }); //
+
+            kendo.bind($("#example"), viewModel);
+
+
+
+        </script>
+    </body>
+</html>
