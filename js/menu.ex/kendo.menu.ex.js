@@ -60,10 +60,10 @@
  */
 
 (function( $, undefined ){
-    var hiding = false;
-    var showing = false;
-
     var MenuEx = window.kendo.ui.Menu.extend({/** @lends kendo.ui.Menu.prototype */
+     _hiding : false;
+    _that._showing : false;
+
 
         /**
          * target object which was clicked
@@ -102,30 +102,30 @@
 
         hide: function () {
 	    var that = this;
-            if (showing) {
-                hiding = true;
+            if (that._showing) {
+                that._hiding = true;
                 var $target = $(that.target);
                 if ($target.hasClass('k-item')) {
                     $target.find('.k-in').removeClass('k-state-focused');
                 }
                 that.element.fadeOut(function() {
 
-                    hiding = false;
-                    showing = false;
+                    that._hiding = false;
+                    that._showing = false;
                 });
             }
         },
 
         show: function (anchor, e) {
 	    var that=this;
-            if (hiding == false) {
+            if (that._hiding == false) {
                 that.target = e.currentTarget;
                 var $target = $(that.target);
                 if ($target.hasClass('k-item')) {
                     $target.find('.k-in').addClass('k-state-focused');
                 }
                 that.element.css({'top': e.pageY, 'left': e.pageX});
-                that.element.fadeIn(function(){ showing = true; });
+                that.element.fadeIn(function(){ that._showing = true; });
             }
         },
 
