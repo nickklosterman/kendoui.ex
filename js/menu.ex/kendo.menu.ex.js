@@ -61,8 +61,8 @@
 
 (function( $, undefined ){
     var MenuEx = window.kendo.ui.Menu.extend({/** @lends kendo.ui.Menu.prototype */
-     _hiding : false;
-    _that._showing : false;
+     _hiding : false,
+	_showing : false,
 
 
         /**
