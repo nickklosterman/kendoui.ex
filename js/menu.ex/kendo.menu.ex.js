@@ -117,6 +117,7 @@
         },
 
         show: function (anchor, e) {
+	    $(document).click();
 	    var that=this;
             if (that._hiding == false) {
                 that.target = e.currentTarget;
